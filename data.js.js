@@ -15,7 +15,7 @@ title:"21 Ideias para ganhar dinheiro na internet agora",
 description:"Com este E-book, você descobre estratégias validadas para transformar sua paixão em provisão.",
 price:"De R$ 97,00 por R$ 6x 8,82",
 category:"financas",
-image:"img/ideias.webp,
+image:"img/ideias.webp",
 hotmartLink:"https://pay.hotmart.com/Y104750637D?checkoutMode=10&split=6",
 bestseller:true
 },
