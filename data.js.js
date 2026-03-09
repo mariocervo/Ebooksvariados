@@ -37,7 +37,7 @@ title:"Amamentação Descomplicada",
 description:"Guia completo para mães de primeira viagem.",
 price:"De R$ 97,00 por R$ 6x 8,82",
 category:"educacao",
-image:"img/Amamentação.webp",
+image:"img/Amamentacao.webp",
 hotmartLink:"https://pay.hotmart.com/E104760347K?checkoutMode=10&split=6",
 bestseller:true
 },
