@@ -84,12 +84,4 @@ text:"Excelente material.",
 rating:5
 }
 
-{
-id:3,
-name:"Leandra Perpetua",
-role:"Academico em direito",
-text:"Gostei muito dos ebooks",
-rating:5
-}
-
 ];
