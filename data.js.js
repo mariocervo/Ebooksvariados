@@ -70,16 +70,16 @@ export const testimonials = [
 
 {
 id:1,
-name:"Carlos Silva",
-role:"Empreendedor",
+name:"Mariana Vitoria",
+role:"Altonoma",
 text:"Mudou minha rotina completamente.",
 rating:5
 },
 
 {
 id:2,
-name:"Mariana Costa",
-role:"Professora",
+name:"Cassio Rafael",
+role:"Academico em direito",
 text:"Excelente material.",
 rating:5
 }
