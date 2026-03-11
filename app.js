@@ -60,7 +60,18 @@ return `
 
 <span>${ebook.price}</span>
 
-<a href="${ebook.hotmartLink}" target="_blank">Comprar</a>
+<a href="${ebook.hotmartLink}" target="_blank"
+class="mt-4 flex items-center justify-center gap-2 px-5 py-3 rounded-full 
+bg-brand-gold text-brand-black font-semibold 
+hover:bg-brand-goldlight hover:scale-105 
+transition-all duration-300 
+shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+
+<i data-lucide="shopping-cart" class="w-5 h-5"></i>
+
+Comprar agora
+
+</a>
 
 </div>
 `;
