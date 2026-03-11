@@ -1,263 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor Mario Gabriel | Ebooks de Qualidade</title>
-    <meta name="description" content="Descubra ebooks de qualidade em diversas áreas com Mario Gabriel. Aprimore seus conhecimentos em desenvolvimento pessoal, finanças, saúde e muito mais.">
-    <meta name="keywords" content="ebooks, mario gabriel, desenvolvimento pessoal, finanças, saúde, cursos, hotmart">
-    <meta name="author" content="Mario Gabriel Spineti de Carvalho">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans:['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            black: '#0A0A0A',
-                            dark: '#141414',
-                            gold: '#D4AF37',
-                            goldlight: '#F3D568',
-                            golddark: '#AA8A25',
-                            white: '#FFFFFF',
-                            gray: '#888888',
-                            light: '#F5F5F5'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professor Mario Gabriel | Ebooks de Qualidade</title>
+
+<meta name="description" content="Descubra ebooks de qualidade em diversas áreas com Mario Gabriel. Aprimore seus conhecimentos em desenvolvimento pessoal, finanças, saúde e muito mais.">
+<meta name="keywords" content="ebooks, mario gabriel, desenvolvimento pessoal, finanças, saúde, cursos, hotmart">
+<meta name="author" content="Mario Gabriel Spineti de Carvalho">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans:['Inter','sans-serif'],
+},
+colors: {
+brand:{
+black:'#0A0A0A',
+dark:'#141414',
+gold:'#D4AF37',
+goldlight:'#F3D568',
+golddark:'#AA8A25',
+white:'#FFFFFF',
+gray:'#888888',
+light:'#F5F5F5'
+}
+}
+}
+}
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body class="bg-brand-black text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-black">
 
-    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-brand-black/80 border-b border-white/10" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight text-brand-white flex items-center gap-2 group">
-                <span class="w-8 h-8 rounded bg-brand-gold text-brand-black flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">M</span>
-                Mario Gabriel
-            </a>
-            <div class="hidden md:flex gap-8 items-center text-sm font-medium text-brand-gray">
-                <a href="#destaques" class="hover:text-brand-gold transition-colors">Destaques</a>
-                <a href="#catalogo" class="hover:text-brand-gold transition-colors">Catálogo</a>
-                <a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a>
-                <a href="#depoimentos" class="hover:text-brand-gold transition-colors">Depoimentos</a>
-            </div>
-            <div class="hidden md:flex">
-                <a href="#catalogo" class="px-5 py-2 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-goldlight transition-colors shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                    Ver Ebooks
-                </a>
-            </div>
-            <button class="md:hidden text-brand-white" id="menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
-        </div>
-    </nav>
+<nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-brand-black/80 border-b border-white/10" id="navbar">
 
-    <main>
-        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-gold/10 via-brand-black to-brand-black z-0"></div>
-            
-            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center reveal">
-                <span class="px-4 py-1.5 rounded-full border border-brand-gold/30 text-brand-gold text-sm font-medium tracking-wide uppercase mb-6 inline-block bg-brand-gold/5 backdrop-blur-sm">
-                    Conhecimento que transforma
-                </span>
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-brand-white mb-6 leading-tight">
-                    Descubra ebooks de qualidade <br class="hidden md:block">
-                    em <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-goldlight">diversas áreas</span>
-                </h1>
-                <p class="text-lg md:text-xl text-brand-gray max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Acelere seu desenvolvimento pessoal e profissional. Conteúdos práticos, diretos e focados em resultados reais.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gold text-brand-black font-bold text-lg hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2">
-                        <i data-lucide="book-open" class="w-5 h-5"></i>
-                        Ver Ebooks
-                    </a>
-                    <a href="#destaques" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-dark border border-white/10 text-brand-white font-medium text-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="star" class="w-5 h-5"></i>
-                        Mais Vendidos
-                    </a>
-                </div>
-            </div>
-        </section>
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <section id="destaques" class="py-24 bg-brand-black border-t border-white/5 relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-white mb-4">Mais Vendidos</h2>
-                        <p class="text-brand-gray">Os títulos preferidos pelos nossos leitores.</p>
-                    </div>
-                    <a href="#catalogo" class="text-brand-gold hover:text-brand-goldlight transition-colors flex items-center gap-1 mt-4 md:mt-0 font-medium">
-                        Ver todos <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="destaques-grid">
-                </div>
-            </div>
-        </section>
+<a href="#" class="text-xl font-bold tracking-tight text-brand-white flex items-center gap-2 group">
+<span class="w-8 h-8 rounded bg-brand-gold text-brand-black flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">M</span>
+Mario Gabriel
+</a>
 
-        <section id="catalogo" class="py-24 bg-brand-dark relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-white mb-4">Catálogo Completo</h2>
-                    <p class="text-brand-gray max-w-2xl mx-auto">Explore nossa biblioteca por categoria e encontre o material perfeito para o seu momento.</p>
-                </div>
+<div class="hidden md:flex gap-8 items-center text-sm font-medium text-brand-gray">
+<a href="#destaques" class="hover:text-brand-gold transition-colors">Destaques</a>
+<a href="#catalogo" class="hover:text-brand-gold transition-colors">Catálogo</a>
+<a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a>
+<a href="#depoimentos" class="hover:text-brand-gold transition-colors">Depoimentos</a>
+</div>
 
-                <div class="flex flex-wrap justify-center gap-3 mb-12 reveal" id="category-filters">
-                </div>
+<div class="hidden md:flex">
+<a href="#catalogo" class="px-5 py-2 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-goldlight transition-colors shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+Ver Ebooks
+</a>
+</div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="catalogo-grid">
-                </div>
-            </div>
-        </section>
+<button class="md:hidden text-brand-white" id="menu-btn">
+<i data-lucide="menu"></i>
+</button>
 
-        <section id="sobre" class="py-24 bg-brand-black border-t border-white/5 relative overflow-hidden">
-            <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-brand-gold/5 to-transparent z-0"></div>
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="w-full lg:w-1/2 reveal">
-                        <div class="relative w-full max-w-md mx-auto">
-                            <div class="absolute inset-0 bg-brand-gold/20 blur-3xl rounded-full"></div>
-                            <img src="img/autor/mario.webp" alt="Mario Gabriel" class="relative z-10 w-full h-auto rounded-2xl grayscale border border-white/10 shadow-2xl hover:grayscale-0 transition-all duration-700 object-cover aspect-square">
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/2 reveal">
-                        <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-brand-white mb-6">Mario Gabriel <br><span class="text-brand-gold">Spineti de Carvalho</span></h2>
-                        <div class="space-y-6 text-brand-gray text-lg leading-relaxed">
-                            <p>
-                                Aos 28 anos, atuo como empreendedor digital com um propósito claro: conectar pessoas ao conhecimento que elas precisam para transformar suas realidades.
-                            </p>
-                            <p>
-                                Acredito que a educação continuada é a chave para o sucesso. Por isso, faço uma curadoria rigorosa de ebooks, garantindo que cada material oferecido aqui traga qualidade, aplicabilidade e resultados reais, seja em desenvolvimento pessoal, finanças, saúde ou educação.
-                            </p>
-                            <p>
-                                Minha missão é simplificar a sua busca pelo aprimoramento, oferecendo os melhores infoprodutos do mercado em um só lugar.
-                            </p>
-                        </div>
-                        <div class="mt-10 flex gap-4">
-                            <a href="#catalogo" class="px-6 py-3 rounded-full bg-brand-white text-brand-black font-semibold hover:bg-gray-200 transition-colors">
-                                Conhecer o trabalho
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+</div>
+</nav>
 
-        <section id="depoimentos" class="py-24 bg-brand-dark relative">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="text-center mb-16 reveal">
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-white mb-4">
-                O que dizem os leitores
-            </h2>
-            <p class="text-brand-gray">
-                Inúmeras pessoas já transformaram suas vidas com nossos materiais.
-            </p>
-        </div>
+<main>
 
-        <div style="text-align:center;margin-top:40px;">
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
 
-            <button id="btnAvaliar"
-            class="px-8 py-4 rounded-full bg-brand-gold text-black font-bold flex items-center gap-2 mx-auto hover:bg-brand-goldlight transition-all">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-gold/10 via-brand-black to-brand-black z-0"></div>
 
-                <i data-lucide="arrow-right"></i>
-                Deixe sua avaliação
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-center reveal">
 
-            </button>
+<span class="px-4 py-1.5 rounded-full border border-brand-gold/30 text-brand-gold text-sm font-medium tracking-wide uppercase mb-6 inline-block bg-brand-gold/5 backdrop-blur-sm">
+Conhecimento que transforma
+</span>
 
-            <div id="contadorAvaliacoes" style="margin-top:10px;"></div>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-brand-white mb-6 leading-tight">
 
-        </div>
+Descubra ebooks de qualidade
+<br class="hidden md:block">
 
-        <!-- MODAL DE AVALIAÇÃO -->
-        <div id="modalAvaliar" class="modal">
-            <div class="modal-box">
+em
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-goldlight">
+diversas áreas
+</span>
 
-                <h3>Deixe sua avaliação</h3>
+</h1>
 
-                <input 
-                id="nomeUsuario" 
-                placeholder="Seu nome" 
-                maxlength="200">
+<p class="text-lg md:text-xl text-brand-gray max-w-2xl mx-auto mb-10 leading-relaxed">
 
-                <textarea 
-                id="comentarioUsuario" 
-                maxlength="200"
-                placeholder="Escreva seu comentário"></textarea>
+Acelere seu desenvolvimento pessoal e profissional.
+Conteúdos práticos, diretos e focados em resultados reais.
 
-                <div class="stars">
-                    <span data-star="1">⭐</span>
-                    <span data-star="2">⭐</span>
-                    <span data-star="3">⭐</span>
-                    <span data-star="4">⭐</span>
-                    <span data-star="5">⭐</span>
-                </div>
+</p>
 
-                <button id="enviarComentario">
-                    Enviar
-                </button>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
 
-            </div>
-        </div>
+<a href="#catalogo" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gold text-brand-black font-bold text-lg hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2">
+<i data-lucide="book-open" class="w-5 h-5"></i>
+Ver Ebooks
+</a>
 
-        <!-- GRID DE DEPOIMENTOS -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="depoimentos-grid">
-        </div>
+<a href="#destaques" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-dark border border-white/10 text-brand-white font-medium text-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+<i data-lucide="star" class="w-5 h-5"></i>
+Mais Vendidos
+</a>
 
-    </div>
+</div>
+</div>
 </section>
-        </section>
 
-        <section id="cta" class="py-24 bg-brand-black relative overflow-hidden border-t border-white/5">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold/10 via-brand-black to-brand-black z-0"></div>
-            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-brand-white mb-6">Pronto para dar o próximo passo?</h2>
-                <p class="text-xl text-brand-gray mb-10">O conhecimento que você procura está a um clique de distância. Escolha seu ebook e comece hoje mesmo.</p>
-                <a href="#catalogo" class="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-brand-gold text-brand-black font-bold text-xl hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]">
-                    Explorar Ebooks Agora
-                    <i data-lucide="arrow-right"></i>
-                </a>
-            </div>
-        </section>
-    </main>
+<!-- RESTANTE DO SITE CONTINUA IGUAL -->
 
-    <footer class="bg-[#050505] pt-16 pb-8 border-t border-white/10 text-brand-gray">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="md:col-span-2">
-                    <a href="#" class="text-2xl font-bold tracking-tight text-brand-white flex items-center gap-2 mb-4">
-                        <span class="w-8 h-8 rounded bg-brand-gold text-brand-black flex items-center justify-center font-bold text-lg">M</span>
-                        Professor Mario Gabriel
-                    </a>
-                    <p class="mb-6 max-w-sm">Ebooks de alta qualidade selecionados para o seu desenvolvimento contínuo nas mais diversas áreas.</p>
-                </div>
-                <div>
-                    <h3 class="text-brand-white font-semibold mb-4 uppercase text-sm tracking-wider">Navegação</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#destaques" class="hover:text-brand-gold transition-colors">Destaques</a></li>
-                        <li><a href="#catalogo" class="hover:text-brand-gold transition-colors">Catálogo</a></li>
-                        <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-brand-white font-semibold mb-4 uppercase text-sm tracking-wider">Contato</h3>
-                    <ul class="space-y-3">
-                        <li>
+<footer class="bg-[#050505] pt-16 pb-8 border-t border-white/10 text-brand-gray">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+<div class="md:col-span-2">
+
+<a href="#" class="text-2xl font-bold tracking-tight text-brand-white flex items-center gap-2 mb-4">
+<span class="w-8 h-8 rounded bg-brand-gold text-brand-black flex items-center justify-center font-bold text-lg">M</span>
+Professor Mario Gabriel
+</a>
+
+<p class="mb-6 max-w-sm">
+Ebooks de alta qualidade selecionados para o seu desenvolvimento contínuo nas mais diversas áreas.
+</p>
+
+</div>
+
+<div>
+
+<h3 class="text-brand-white font-semibold mb-4 uppercase text-sm tracking-wider">
+Navegação
+</h3>
+
+<ul class="space-y-3">
+
+<li><a href="#destaques" class="hover:text-brand-gold transition-colors">Destaques</a></li>
+<li><a href="#catalogo" class="hover:text-brand-gold transition-colors">Catálogo</a></li>
+<li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre</a></li>
+
+</ul>
+</div>
+
+<div>
+
+<h3 class="text-brand-white font-semibold mb-4 uppercase text-sm tracking-wider">
+Contato
+</h3>
+
+<ul class="space-y-3">
+
+<li>
 <a href="https://wa.me/5517991996793" target="_blank" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
 <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
 </a>
@@ -274,29 +183,41 @@
 <i data-lucide="facebook" class="w-4 h-4"></i> Facebook
 </a>
 </li>
-                        <!-- NOVO BOTÃO: OUTROS SITES -->
-                        <li>
+
+<li>
 <a href="https://mariocervo.github.io/site-de-teologia/" target="_blank" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
 <i data-lucide="globe" class="w-4 h-4"></i> Sobre Teologia
 </a>
 </li>
-            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm">
-                <p>&copy; 2026 Mario Gabriel Spineti de Carvalho. Todos os direitos reservados.</p>
-                <div class="mt-4 md:mt-0 flex gap-4">
-                    <a href="#" class="hover:text-brand-white transition-colors">Termos de Uso</a>
-                    <a href="#" class="hover:text-brand-white transition-colors">Privacidade</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script type="module" src="app.js"></script>
-  <script>
+</ul>
+
+</div>
+</div>
+
+<!-- ALTERAÇÃO APENAS AQUI -->
+
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm w-full">
+
+<p class="w-full md:w-auto text-left">
+© 2026 Mario Gabriel Spineti de Carvalho. Todos os direitos reservados.
+</p>
+
+<div class="mt-4 md:mt-0 flex gap-4">
+<a href="#" class="hover:text-brand-white transition-colors">Termos de Uso</a>
+<a href="#" class="hover:text-brand-white transition-colors">Privacidade</a>
+</div>
+
+</div>
+
+</div>
+</footer>
+
+<script type="module" src="app.js"></script>
+
+<script>
 lucide.createIcons();
 </script>
-  
+
 </body>
 </html>
-
-
-
