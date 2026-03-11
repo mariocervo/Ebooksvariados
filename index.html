@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-
+<html lang="pt-BR">
 <head>
 
 <meta charset="UTF-8">
@@ -8,63 +7,50 @@
 
 <title>Ebooks de Qualidade | Mario Gabriel</title>
 
-<meta name="description" content="Descubra ebooks de qualidade em desenvolvimento pessoal, finanças, saúde e educação. Conteúdo selecionado por Mario Gabriel.">
-
-<meta name="keywords" content="ebooks, livros digitais, desenvolvimento pessoal, finanças, educação, saúde">
-
-<meta name="author" content="Mario Gabriel Spineti de Carvalho">
+<meta name="description" content="Biblioteca de ebooks de qualidade em desenvolvimento pessoal, finanças, saúde e educação.">
+<meta name="keywords" content="ebooks, livros digitais, desenvolvimento pessoal, finanças, educação">
+<meta name="author" content="Mario Gabriel">
 
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph (redes sociais) -->
+<!-- SEO SOCIAL -->
 
 <meta property="og:title" content="Ebooks de Qualidade | Mario Gabriel">
-<meta property="og:description" content="Descubra ebooks selecionados para transformar sua vida.">
-<meta property="og:image" content="https://mariocervo.github.io/Ebooksvariados/img/autor/mario.webp">
-<meta property="og:url" content="https://mariocervo.github.io/Ebooksvariados/">
+<meta property="og:description" content="Descubra ebooks selecionados para transformar sua vida">
+<meta property="og:image" content="img/autor/mario.webp">
 <meta property="og:type" content="website">
 
 <link rel="canonical" href="https://mariocervo.github.io/Ebooksvariados/">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <script src="https://unpkg.com/lucide@latest"></script>
 
-<link rel="stylesheet" href="style.css">
-
 </head>
 
 
-<body class="bg-black text-gray-200 font-sans">
+<body class="bg-black text-white font-sans">
 
 <!-- NAVBAR -->
 
-<nav class="fixed w-full bg-black/80 backdrop-blur border-b border-gray-800 z-50">
+<nav class="bg-black border-b border-gray-800 fixed w-full z-50">
 
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-<div class="text-white font-bold text-xl flex gap-2 items-center">
-<span class="bg-yellow-500 text-black w-8 h-8 flex items-center justify-center rounded font-bold">M</span>
+<h1 class="text-xl font-bold flex items-center gap-2">
+<span class="bg-yellow-500 text-black px-2 py-1 rounded">M</span>
 Mario Gabriel
-</div>
+</h1>
 
-<div class="hidden md:flex gap-8 text-gray-400">
+<div class="flex gap-6 text-gray-400">
 
-<a href="#destaques">Destaques</a>
-<a href="#catalogo">Catálogo</a>
+<a href="#ebooks">Ebooks</a>
 <a href="#sobre">Sobre</a>
 <a href="#depoimentos">Depoimentos</a>
 
 </div>
-
-<a href="#catalogo" class="bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold">
-Ver Ebooks
-</a>
 
 </div>
 
@@ -75,27 +61,25 @@ Ver Ebooks
 
 <section class="min-h-screen flex items-center justify-center text-center px-6">
 
-<div class="max-w-4xl">
+<div>
 
-<h1 class="text-5xl md:text-7xl font-bold mb-6">
+<h1 class="text-6xl font-bold mb-6">
 
 Descubra ebooks de qualidade
 
-<span class="text-yellow-500">em diversas áreas</span>
+<span class="text-yellow-500">para transformar sua vida</span>
 
 </h1>
 
-<p class="text-gray-400 text-lg mb-10">
+<p class="text-gray-400 text-lg mb-8">
 
-Conteúdos selecionados para acelerar seu desenvolvimento pessoal e profissional.
++3500 leitores já adquiriram nossos materiais
 
 </p>
 
-<a href="#catalogo" class="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 justify-center mx-auto w-fit">
+<a href="#ebooks" class="bg-yellow-500 text-black px-8 py-4 rounded-full font-bold">
 
-<i data-lucide="book-open"></i>
-
-Ver Ebooks
+Explorar Ebooks
 
 </a>
 
@@ -104,90 +88,121 @@ Ver Ebooks
 </section>
 
 
-<!-- DESTAQUES -->
+<!-- EBOOKS -->
 
-<section id="destaques" class="py-24">
-
-<div class="max-w-7xl mx-auto px-6">
-
-<h2 class="text-4xl text-center font-bold mb-16">
-
-Mais Vendidos
-
-</h2>
-
-<div id="destaques-grid" class="grid md:grid-cols-3 gap-8"></div>
-
-</div>
-
-</section>
-
-
-<!-- CATALOGO -->
-
-<section id="catalogo" class="py-24 bg-gray-900">
+<section id="ebooks" class="py-24 bg-gray-900">
 
 <div class="max-w-7xl mx-auto px-6">
 
 <h2 class="text-4xl text-center font-bold mb-16">
 
-Catálogo Completo
+Catálogo de Ebooks
 
 </h2>
 
-<div id="catalogo-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+
+<!-- CARD -->
+
+<div class="bg-black p-6 rounded-xl border border-gray-800 hover:scale-105 transition">
+
+<img src="img/ebook1.webp" class="rounded mb-4">
+
+<span class="bg-yellow-500 text-black px-2 py-1 text-xs rounded">
+🔥 Mais vendido
+</span>
+
+<h3 class="text-xl font-bold mt-4">
+
+Inteligência Financeira
+
+</h3>
+
+<p class="text-gray-400 mt-2">
+
+Aprenda a controlar suas finanças e construir riqueza.
+
+</p>
+
+<a href="ebook.html?id=1" class="block mt-6 bg-yellow-500 text-black text-center py-2 rounded">
+
+Ver Ebook
+
+</a>
+
+</div>
+
+
+<!-- CARD -->
+
+<div class="bg-black p-6 rounded-xl border border-gray-800 hover:scale-105 transition">
+
+<img src="img/ebook2.webp" class="rounded mb-4">
+
+<span class="bg-green-500 text-black px-2 py-1 text-xs rounded">
+⭐ Recomendado
+</span>
+
+<h3 class="text-xl font-bold mt-4">
+
+Desenvolvimento Pessoal
+
+</h3>
+
+<p class="text-gray-400 mt-2">
+
+Descubra técnicas para evoluir sua mentalidade.
+
+</p>
+
+<a href="ebook.html?id=2" class="block mt-6 bg-yellow-500 text-black text-center py-2 rounded">
+
+Ver Ebook
+
+</a>
+
+</div>
+
+
+</div>
 
 </div>
 
 </section>
+
 
 
 <!-- SOBRE -->
 
 <section id="sobre" class="py-24">
 
-<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-<img src="img/autor/mario.webp" class="rounded-2xl">
-
-<div>
+<div class="max-w-5xl mx-auto px-6 text-center">
 
 <h2 class="text-4xl font-bold mb-6">
 
-Mario Gabriel
+Sobre Mario Gabriel
 
 </h2>
 
-<p class="text-gray-400 mb-6">
+<p class="text-gray-400 text-lg">
 
-Aos 28 anos, atuo como empreendedor digital com um propósito claro: conectar pessoas ao conhecimento que elas precisam para transformar suas realidades.
-
-</p>
-
-<p class="text-gray-400 mb-6">
-
-Acredito que a educação continuada é a chave para o sucesso.
+Aos 28 anos, atuo como empreendedor digital com a missão de conectar pessoas ao conhecimento que pode transformar suas vidas.
 
 </p>
-
-<p class="text-gray-400">
-
-Minha missão é simplificar a busca pelo conhecimento oferecendo os melhores ebooks em um só lugar.
-
-</p>
-
-</div>
 
 </div>
 
 </section>
 
 
+
 <!-- DEPOIMENTOS -->
 
 <section id="depoimentos" class="py-24 bg-gray-900">
 
-<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-6xl mx-auto px-6">
 
 <h2 class="text-4xl text-center font-bold mb-16">
 
@@ -195,26 +210,57 @@ O que dizem os leitores
 
 </h2>
 
-<div id="depoimentos-grid" class="grid md:grid-cols-3 gap-8"></div>
+<div id="comentarios"></div>
 
 </div>
 
 </section>
 
 
+
+<!-- CTA -->
+
+<section class="py-24 text-center">
+
+<h2 class="text-4xl font-bold mb-6">
+
+Comece sua jornada de conhecimento hoje
+
+</h2>
+
+<p class="text-gray-400 mb-8">
+
+Escolha um ebook e transforme sua vida.
+
+</p>
+
+<a href="#ebooks" class="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold">
+
+Explorar Agora
+
+</a>
+
+</section>
+
+
+
 <!-- FOOTER -->
 
-<footer class="bg-black border-t border-gray-800 pt-16 pb-10">
+<footer class="bg-black border-t border-gray-800 py-12">
 
 <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
 
 <div>
 
-<h3 class="text-white font-bold mb-4">Mario Gabriel</h3>
+<h3 class="font-bold text-lg mb-4">
+
+Mario Gabriel
+
+</h3>
 
 <p class="text-gray-400">
 
-Ebooks selecionados para seu desenvolvimento.
+Biblioteca de ebooks para desenvolvimento pessoal e profissional.
 
 </p>
 
@@ -222,12 +268,15 @@ Ebooks selecionados para seu desenvolvimento.
 
 <div>
 
-<h3 class="text-white font-bold mb-4">Navegação</h3>
+<h3 class="font-bold mb-4">
 
-<ul class="space-y-2 text-gray-400">
+Links
 
-<li><a href="#destaques">Destaques</a></li>
-<li><a href="#catalogo">Catálogo</a></li>
+</h3>
+
+<ul class="text-gray-400 space-y-2">
+
+<li><a href="#ebooks">Ebooks</a></li>
 <li><a href="#sobre">Sobre</a></li>
 
 </ul>
@@ -236,27 +285,23 @@ Ebooks selecionados para seu desenvolvimento.
 
 <div>
 
-<h3 class="text-white font-bold mb-4">Contato</h3>
+<h3 class="font-bold mb-4">
 
-<ul class="space-y-2 text-gray-400">
+Contato
+
+</h3>
+
+<ul class="text-gray-400 space-y-2">
 
 <li>
-<a href="https://wa.me/5517991996793" target="_blank">WhatsApp</a>
+<a href="https://wa.me/5517991996793">
+WhatsApp
+</a>
 </li>
 
 <li>
-<a href="https://instagram.com/prof.mariogabriel" target="_blank">Instagram</a>
-</li>
-
-<li>
-<a href="https://facebook.com/MarioGSCarvalho" target="_blank">Facebook</a>
-</li>
-
-<li>
-<a href="https://mariocervo.github.io/site-de-teologia/" target="_blank">
-
+<a href="https://mariocervo.github.io/site-de-teologia/">
 Sobre Teologia
-
 </a>
 </li>
 
@@ -266,45 +311,21 @@ Sobre Teologia
 
 </div>
 
-<div class="text-center text-gray-500 mt-10 text-sm">
+<div class="text-center text-gray-500 mt-10">
 
-© 2026 Mario Gabriel Spineti de Carvalho. Todos os direitos reservados.
-
-<br>
-
-<a href="#">Termos de Uso</a> • <a href="#">Privacidade</a>
+© 2026 Mario Gabriel Spineti de Carvalho
 
 </div>
 
 </footer>
 
 
-<!-- BOTÃO WHATSAPP FLUTUANTE -->
-
-<a href="https://wa.me/5517991996793" target="_blank"
-class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg">
-
-<i data-lucide="message-circle"></i>
-
-</a>
-
-
-<!-- BOTÃO VOLTAR AO TOPO -->
-
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})"
-class="fixed bottom-6 left-6 bg-yellow-500 text-black p-4 rounded-full shadow-lg">
-
-<i data-lucide="arrow-up"></i>
-
-</button>
-
-
-<script type="module" src="app.js"></script>
 
 <script>
-lucide.createIcons();
-</script>
 
+lucide.createIcons()
+
+</script>
 
 </body>
 </html>
