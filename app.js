@@ -1,288 +1,76 @@
-import { categories, ebooks, testimonials } from "./data.js";
+import { ebooks } from "./data.js";
 
 /* ========================= */
 /* INICIALIZAÇÃO */
 /* ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-criarNavbarScroll();
-renderDestaques();
-renderCatalogo();
-renderDepoimentos();
-iniciarSistemaAvaliacoes();
-iniciarComentarios();
-
+    criarNavbarScroll();
+    renderDestaques();
+    renderCatalogo();
 });
 
 /* ========================= */
 /* NAVBAR */
 /* ========================= */
 
-function criarNavbarScroll(){
+function criarNavbarScroll() {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
 
-const navbar = document.getElementById("navbar");
-
-if(!navbar) return;
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>50){
-
-navbar.classList.add("py-2");
-navbar.classList.remove("py-4");
-
-}else{
-
-navbar.classList.add("py-4");
-navbar.classList.remove("py-2");
-
-}
-
-});
-
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("py-2");
+            navbar.classList.remove("py-4");
+        } else {
+            navbar.classList.add("py-4");
+            navbar.classList.remove("py-2");
+        }
+    });
 }
 
 /* ========================= */
-/* CARDS DE EBOOK */
+/* CARDS DE EBOOK (compatíveis com Tailwind e modal) */
 /* ========================= */
 
-function criarCard(ebook){
-
-return `
-<div class="ebook-card">
-
-<img loading="lazy" src="${ebook.image}" alt="${ebook.title}">
-
-<h3>${ebook.title}</h3>
-
-<p>${ebook.description}</p>
-
-<span>${ebook.price}</span>
-
-<a href="${ebook.hotmartLink}" target="_blank"
-class="mt-4 flex items-center justify-center gap-2 px-5 py-3 rounded-full 
-bg-brand-gold text-brand-black font-semibold 
-hover:bg-brand-goldlight hover:scale-105 
-transition-all duration-300 
-shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-
-<i data-lucide="shopping-cart" class="w-5 h-5"></i>
-
-Comprar agora
-
-</a>
-
-</div>
-`;
-
+function criarCard(ebook) {
+    return `
+        <div class="bg-brand-black border border-white/10 rounded-xl p-4 hover:scale-105 transition">
+            <img loading="lazy" src="${ebook.image}" alt="${ebook.title}" class="rounded mb-4">
+            <h3 class="text-brand-white font-bold text-lg mb-2">${ebook.title}</h3>
+            <p class="text-brand-gray text-sm mb-4">${ebook.description}</p>
+            <p class="text-brand-gold font-bold mb-4">${ebook.price}</p>
+            <button class="btn-detalhes-ebook w-full mb-2 flex items-center justify-center gap-2 bg-black text-white py-2 rounded font-semibold hover:bg-gray-800 transition" 
+                data-titulo="${ebook.title}" data-descricao="${ebook.description}">
+                <i data-lucide="info"></i> Ver detalhes
+            </button>
+            <a href="${ebook.hotmartLink}" target="_blank" 
+               class="block text-center bg-brand-gold text-black py-2 rounded font-bold hover:bg-brand-goldlight transition">
+                Comprar
+            </a>
+        </div>
+    `;
 }
 
 /* ========================= */
-/* DESTAQUES */
+/* DESTAQUES (MAIS VENDIDOS) */
 /* ========================= */
 
-function renderDestaques(){
+function renderDestaques() {
+    const grid = document.getElementById("destaques-grid");
+    if (!grid) return;
 
-const grid = document.getElementById("destaques-grid");
-
-if(!grid) return;
-
-const best = ebooks.filter(e => e.bestseller);
-
-grid.innerHTML = best.map(criarCard).join("");
-
+    const best = ebooks.filter(e => e.bestseller).slice(0, 3); // apenas 3 para a grade de 3 colunas
+    grid.innerHTML = best.map(criarCard).join("");
 }
 
 /* ========================= */
-/* CATÁLOGO */
+/* CATÁLOGO COMPLETO */
 /* ========================= */
 
-function renderCatalogo(categoria="todos"){
-
-const grid = document.getElementById("catalogo-grid");
-
-if(!grid) return;
-
-let lista = ebooks;
-
-if(categoria !== "todos"){
-
-lista = ebooks.filter(e => e.category === categoria);
-
-}
-
-grid.innerHTML = lista.map(criarCard).join("");
-
-}
-
-/* ========================= */
-/* DEPOIMENTOS */
-/* ========================= */
-
-function renderDepoimentos(){
-
-const grid = document.getElementById("depoimentos-grid");
-
-if(!grid) return;
-
-grid.innerHTML = testimonials.map(t => `
-
-<div class="depoimento">
-<h4>${t.name}</h4>
-<p>${t.text}</p>
-⭐ ${t.rating}
-</div>
-
-`).join("");
-
-}
-
-/* ========================= */
-/* SISTEMA DE AVALIAÇÕES */
-/* ========================= */
-
-function iniciarSistemaAvaliacoes(){
-
-const modal = document.getElementById("reviewModal");
-const open = document.getElementById("openReview");
-const send = document.getElementById("enviarReview");
-
-let rating = 0;
-
-if(open){
-
-open.onclick = () => {
-
-modal.style.display="flex";
-
-};
-
-}
-
-document.querySelectorAll(".stars span").forEach(star => {
-
-star.onclick = () => {
-
-rating = star.dataset.star;
-
-};
-
-});
-
-if(send){
-
-send.onclick = () => {
-
-const nome = document.getElementById("nome").value;
-const comentario = document.getElementById("comentario").value;
-
-let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-reviews.push({nome, comentario, rating});
-
-localStorage.setItem("reviews", JSON.stringify(reviews));
-
-alert("Avaliação enviada!");
-
-modal.style.display="none";
-
-};
-
-}
-
-}
-
-/* ========================= */
-/* COMENTÁRIOS */
-/* ========================= */
-
-function iniciarComentarios(){
-
-const modal = document.getElementById("modalAvaliar");
-const btn = document.getElementById("btnAvaliar");
-const enviar = document.getElementById("enviarComentario");
-
-let nota = 0;
-
-if(btn){
-
-btn.onclick = () => {
-
-modal.style.display="flex";
-
-};
-
-}
-
-document.querySelectorAll(".stars span").forEach(star => {
-
-star.onclick = () => {
-
-nota = star.dataset.star;
-
-};
-
-});
-
-if(enviar){
-
-enviar.onclick = () => {
-
-const nome = document.getElementById("nomeUsuario").value;
-const texto = document.getElementById("comentarioUsuario").value;
-
-let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
-
-comentarios.push({
-nome,
-texto,
-nota,
-aprovado:false
-});
-
-localStorage.setItem("comentarios", JSON.stringify(comentarios));
-
-alert("Comentário enviado!");
-
-modal.style.display="none";
-
-};
-
-}
-
-carregarComentarios();
-
-}
-
-/* ========================= */
-/* CARREGAR COMENTÁRIOS */
-/* ========================= */
-
-function carregarComentarios(){
-
-let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
-
-const container = document.getElementById("depoimentos-grid");
-
-if(!container) return;
-
-comentarios.forEach(c => {
-
-if(c.aprovado){
-
-const div = document.createElement("div");
-
-div.innerHTML = `
-<h4>${c.nome}</h4>
-<p>${c.texto}</p>
-⭐ ${c.nota}
-`;
-
-container.appendChild(div);
-
-}
-
-});
-
+function renderCatalogo() {
+    const grid = document.getElementById("catalogo-grid");
+    if (!grid) return;
+
+    grid.innerHTML = ebooks.map(criarCard).join("");
 }
