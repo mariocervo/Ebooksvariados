@@ -358,20 +358,7 @@ Ebooks selecionados para o seu crescimento pessoal e profissional.
 
 </footer>
 
-<script type="module" src="app.js"></script>
-
-<script>
-lucide.createIcons();
-
-ScrollReveal().reveal('section',{
-distance:'40px',
-duration:800,
-origin:'bottom',
-interval:100
-});
-</script>
-
- <!-- ========================= -->
+<!-- ========================= -->
 <!-- BUSCA NO SITE -->
 <!-- ========================= -->
 
@@ -661,112 +648,38 @@ fbq('track','PageView')
 </script>
 
 <!-- ========================= -->
-<!-- MODAL DETALHES DO EBOOK (adicionado) -->
+<!-- MODAL DETALHES DO EBOOK (APRIMORADO) -->
 <!-- ========================= -->
 
 <div id="modalDetalhesEbook" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10000; justify-content:center; align-items:center;">
-  <div style="background:#111; padding:20px; border-radius:10px; width:400px; max-width:90%; position:relative; color:white;">
+  <div style="background:#111; padding:30px; border-radius:10px; width:700px; max-width:90%; position:relative; color:white; max-height:80vh; overflow-y:auto;">
     <button id="fecharModalDetalhes" style="position:absolute; top:10px; left:10px; background:transparent; border:none; color:white; font-size:20px; cursor:pointer; display:flex; align-items:center; gap:5px;">
       ← Voltar
     </button>
-    <h3 style="color:white; margin-top:30px; margin-bottom:15px; font-size:1.5rem;">Detalhes do Ebook</h3>
-    <p style="color:#ccc; margin-bottom:10px;"><strong>Título:</strong> <span id="detalheTitulo"></span></p>
-    <p style="color:#ccc; margin-bottom:20px;"><strong>Descrição:</strong> <span id="detalheDescricao"></span></p>
-    <!-- Áreas vazias para você preencher posteriormente -->
-    <p style="color:#888; font-style:italic;">(Conteúdo da descrição será inserido aqui futuramente)</p>
+    <h3 style="color:white; margin-top:30px; margin-bottom:15px; font-size:1.8rem;" id="detalheTitulo">Título do Ebook</h3>
+    <p style="color:#ccc; margin-bottom:20px; white-space:pre-wrap; line-height:1.6;" id="detalheDescricao">Descrição detalhada aparecerá aqui.</p>
   </div>
 </div>
 
-<!-- Script para adicionar botões "Ver detalhes" e controlar o modal -->
+<!-- Módulo principal (app.js) -->
+<script type="module" src="app.js"></script>
+
+<!-- Inicialização extra de ícones e scroll reveal -->
 <script>
-  (function() {
-    // Função para adicionar botões aos cards de ebook
-    function adicionarBotoesDetalhes() {
-      // Seleciona todos os cards dentro das grids de destaque e catálogo
-      const grids = ['#destaques-grid', '#catalogo-grid'];
-      let cards = [];
-      grids.forEach(selector => {
-        const grid = document.querySelector(selector);
-        if (grid) {
-          const children = Array.from(grid.children);
-          cards = cards.concat(children);
-        }
-      });
-
-      if (cards.length === 0) {
-        // Se ainda não encontrou cards, tenta novamente mais tarde
-        setTimeout(adicionarBotoesDetalhes, 500);
-        return;
-      }
-
-      // Para cada card, insere o botão "Ver detalhes" antes do botão de comprar
-      cards.forEach(card => {
-        // Verifica se já não foi adicionado
-        if (card.querySelector('.btn-detalhes-ebook')) return;
-
-        // Procura pelo botão de comprar (assumindo que seja um link ou botão com texto "Comprar" ou similar)
-        const botoes = card.querySelectorAll('a, button');
-        let botaoComprar = null;
-        for (let btn of botoes) {
-          if (btn.textContent.toLowerCase().includes('comprar') || btn.textContent.toLowerCase().includes('ver ebook') || btn.textContent.toLowerCase().includes('saiba mais')) {
-            botaoComprar = btn;
-            break;
-          }
-        }
-
-        // Cria o botão "Ver detalhes"
-        const btnDetalhes = document.createElement('button');
-        btnDetalhes.className = 'btn-detalhes-ebook flex items-center gap-2 px-4 py-2 rounded bg-black text-white font-semibold hover:bg-gray-800 transition-all mb-2';
-        btnDetalhes.innerHTML = '<i data-lucide="info"></i> Ver detalhes';
-        btnDetalhes.setAttribute('data-lucide', 'info');
-        
-        // Adiciona evento para abrir o modal
-        btnDetalhes.addEventListener('click', function(e) {
-          e.preventDefault();
-          // Pega o título do ebook (geralmente um h3, h4 ou elemento com classe)
-          const tituloElem = card.querySelector('h3, h4, .font-bold, .text-white');
-          const titulo = tituloElem ? tituloElem.textContent : 'Título do ebook';
-          // Atualiza o modal com o título (descrição fica vazia para você preencher)
-          document.getElementById('detalheTitulo').textContent = titulo;
-          document.getElementById('detalheDescricao').textContent = ''; // vazio para você preencher
-          // Exibe o modal
-          document.getElementById('modalDetalhesEbook').style.display = 'flex';
-        });
-
-        // Insere o botão antes do botão de comprar, se encontrado; senão, no início do card
-        if (botaoComprar && botaoComprar.parentNode) {
-          botaoComprar.parentNode.insertBefore(btnDetalhes, botaoComprar);
-        } else {
-          // Se não encontrou botão de comprar, coloca no topo do card
-          card.insertBefore(btnDetalhes, card.firstChild);
-        }
-      });
-
-      // Atualiza os ícones do Lucide para o novo botão
-      if (typeof lucide !== 'undefined' && lucide.createIcons) {
-        lucide.createIcons();
-      }
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
     }
-
-    // Fecha o modal ao clicar no botão Voltar
-    document.getElementById('fecharModalDetalhes').addEventListener('click', function() {
-      document.getElementById('modalDetalhesEbook').style.display = 'none';
-    });
-
-    // Fecha o modal ao clicar fora do conteúdo
-    document.getElementById('modalDetalhesEbook').addEventListener('click', function(e) {
-      if (e.target === this) {
-        this.style.display = 'none';
-      }
-    });
-
-    // Aguarda o carregamento da página e tenta adicionar os botões
-    window.addEventListener('load', function() {
-      // Pequeno atraso para garantir que o app.js tenha populado as grids
-      setTimeout(adicionarBotoesDetalhes, 1000);
-    });
-  })();
+    if (typeof ScrollReveal !== 'undefined') {
+      ScrollReveal().reveal('section', {
+        distance:'40px',
+        duration:800,
+        origin:'bottom',
+        interval:100
+      });
+    }
+  });
 </script>
-  
+
 </body>
 </html>
