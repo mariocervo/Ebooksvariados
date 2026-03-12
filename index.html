@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Professor Mario Gabriel | Ebooks de Qualidade</title>
@@ -13,6 +14,30 @@
 <meta name="keywords" content="ebooks, mario gabriel, desenvolvimento pessoal, finanças, saúde, cursos, hotmart">
 
 <meta name="author" content="Mario Gabriel Spineti de Carvalho">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://mariocervo.github.io/Ebooksvariados/">
+
+<meta name="theme-color" content="#0A0A0A">
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+
+<link rel="preload" as="image" href="img/autor/mario.webp">
+
+<!-- Open Graph (Compartilhamento) -->
+
+<meta property="og:title" content="Professor Mario Gabriel | Ebooks de Qualidade">
+<meta property="og:description" content="Descubra ebooks de qualidade em diversas áreas com Mario Gabriel. Aprimore seus conhecimentos em desenvolvimento pessoal, finanças, saúde e muito mais.">
+<meta property="og:image" content="https://mariocervo.github.io/Ebooksvariados/img/autor/mario.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mariocervo.github.io/Ebooksvariados/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Professor Mario Gabriel | Ebooks de Qualidade">
+<meta name="twitter:description" content="Descubra ebooks de qualidade em diversas áreas com Mario Gabriel. Aprimore seus conhecimentos em desenvolvimento pessoal, finanças, saúde e muito mais.">
+<meta name="twitter:image" content="https://mariocervo.github.io/Ebooksvariados/img/autor/mario.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +59,6 @@ black:'#0A0A0A',
 dark:'#141414',
 gold:'#D4AF37',
 goldlight:'#F3D568',
-golddark:'#AA8A25',
 white:'#FFFFFF',
 gray:'#888888',
 light:'#F5F5F5'
@@ -49,87 +73,90 @@ light:'#F5F5F5'
 
 <script src="https://unpkg.com/lucide@latest"></script>
 
+<!-- Scroll Reveal -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Schema.org SEO -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Mario Gabriel Spineti de Carvalho",
+ "jobTitle": "Curador de Ebooks",
+ "url": "https://mariocervo.github.io/Ebooksvariados/",
+ "sameAs": [
+   "https://instagram.com/prof.mariogabriel",
+   "https://facebook.com/MarioGSCarvalho"
+ ]
+}
+</script>
+
 </head>
 
-<body class="bg-brand-black text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-brand-black">
+<body class="bg-brand-black text-brand-light font-sans">
 
 <!-- NAVBAR -->
 
-<nav id="navbar" class="fixed w-full z-50 top-0 backdrop-blur-md bg-brand-black/80 border-b border-white/10">
+<nav class="fixed w-full top-0 bg-brand-black/80 backdrop-blur border-b border-white/10 z-50">
 
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<a href="#" class="text-xl font-bold text-brand-white flex items-center gap-2">
-
-<span class="w-8 h-8 rounded bg-brand-gold text-brand-black flex items-center justify-center font-bold">M</span>
-
+<a href="#" class="text-xl font-bold text-white flex items-center gap-2">
+<span class="w-8 h-8 bg-brand-gold text-black rounded flex items-center justify-center font-bold">M</span>
 Mario Gabriel
-
 </a>
 
-<div class="hidden md:flex gap-8 text-sm text-brand-gray">
+<div class="hidden md:flex gap-8 text-sm text-gray-400">
 
 <a href="#destaques" class="hover:text-brand-gold">Destaques</a>
-
 <a href="#catalogo" class="hover:text-brand-gold">Catálogo</a>
-
 <a href="#sobre" class="hover:text-brand-gold">Sobre</a>
-
 <a href="#depoimentos" class="hover:text-brand-gold">Depoimentos</a>
 
 </div>
 
-<a href="#catalogo" class="px-5 py-2 rounded-full bg-brand-gold text-brand-black font-semibold hover:bg-brand-goldlight">
-
+<a href="#catalogo"
+class="hidden md:block px-5 py-2 rounded-full bg-brand-gold text-black font-semibold hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)]">
 Ver Ebooks
-
 </a>
 
 </div>
 
 </nav>
 
-<main>
-
 <!-- HERO -->
 
-<section id="hero" class="relative min-h-screen flex items-center justify-center pt-20">
+<section class="min-h-screen flex items-center justify-center pt-20">
 
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold/10 via-brand-black to-brand-black"></div>
+<div class="text-center max-w-4xl px-6">
 
-<div class="relative z-10 max-w-5xl mx-auto text-center px-6">
-
-<h1 class="text-5xl md:text-7xl font-bold text-brand-white mb-6">
-
+<h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
 Descubra ebooks de qualidade
-
 <br>
-
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-goldlight">
-
-em diversas áreas
-
-</span>
-
+<span class="text-brand-gold">em diversas áreas</span>
 </h1>
 
-<p class="text-lg md:text-xl text-brand-gray max-w-2xl mx-auto mb-10">
-
+<p class="text-lg text-gray-400 mb-10">
 Acelere seu desenvolvimento pessoal e profissional com conteúdos práticos.
-
 </p>
 
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 
-<a href="#catalogo" class="px-8 py-4 rounded-full bg-brand-gold text-brand-black font-bold">
+<a href="#catalogo"
+class="px-8 py-4 rounded-full bg-brand-gold text-black font-bold flex items-center gap-2 hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)]">
 
+<i data-lucide="book-open"></i>
 Ver Ebooks
 
 </a>
 
-<a href="#destaques" class="px-8 py-4 rounded-full border border-white/10">
+<a href="#destaques"
+class="px-8 py-4 rounded-full bg-brand-dark border border-white/10 text-white flex items-center gap-2 hover:scale-105 transition-all">
 
-Mais Vendidos
+<i data-lucide="star"></i>
+Mais vendidos
 
 </a>
 
@@ -139,82 +166,52 @@ Mais Vendidos
 
 </section>
 
-<!-- DESTAQUES -->
+<!-- DESTAQUES (MAIS VENDIDOS) -->
 
-<section id="destaques" class="py-24">
+<section id="destaques" class="py-24 border-t border-white/5">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
+<h2 class="text-4xl text-white mb-12">Mais Vendidos</h2>
 
-Mais Vendidos
-
-</h2>
-
-<div id="destaques-grid" class="grid md:grid-cols-3 gap-8">
-
-</div>
+<div id="destaques-grid" class="grid md:grid-cols-3 gap-8"></div>
 
 </div>
 
 </section>
 
-<!-- CATÁLOGO -->
+<!-- CATALOGO COMPLETO -->
 
 <section id="catalogo" class="py-24 bg-brand-dark">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
+<h2 class="text-4xl text-white mb-10 text-center">Catálogo Completo</h2>
 
-Catálogo Completo
-
-</h2>
-
-<div id="category-filters" class="flex flex-wrap justify-center gap-3 mb-12">
-
-</div>
-
-<div id="catalogo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-</div>
+<div id="catalogo-grid" class="grid md:grid-cols-4 gap-6"></div>
 
 </div>
 
 </section>
 
-<!-- SOBRE -->
+<!-- SOBRE (ATUALIZADO) -->
 
 <section id="sobre" class="py-24">
 
-<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-<img src="img/autor/mario.webp" class="rounded-2xl border border-white/10">
+<img src="img/autor/mario.webp" loading="lazy" alt="Professor Mario Gabriel" class="rounded-2xl border border-white/10">
 
 <div>
 
-<h2 class="text-4xl font-bold mb-6">
+<h2 class="text-4xl text-white mb-6">Mario Gabriel <span class="text-brand-gold">Spineti de Carvalho</span></h2>
 
-Mario Gabriel
-
-<span class="text-brand-gold">
-
-Spineti de Carvalho
-
-</span>
-
-</h2>
-
-<p class="text-brand-gray mb-4">
-
+<p class="text-gray-400 mb-6">
 Empreendedor digital focado em conectar pessoas ao conhecimento que transforma vidas.
-
 </p>
 
-<p class="text-brand-gray">
-
+<p class="text-gray-400 mb-10">
 Curadoria de ebooks de alta qualidade nas áreas de desenvolvimento pessoal, finanças, saúde e educação.
-
 </p>
 
 </div>
@@ -225,67 +222,70 @@ Curadoria de ebooks de alta qualidade nas áreas de desenvolvimento pessoal, fin
 
 <!-- DEPOIMENTOS -->
 
-<section id="depoimentos" class="py-24 bg-brand-dark">
+<section id="depoimentos" class="py-24 bg-brand-dark relative">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12">
+<div class="text-center mb-16">
 
+<h2 class="text-3xl md:text-4xl font-bold text-brand-white mb-4">
 O que dizem os leitores
-
 </h2>
 
-<div style="text-align:center;margin-bottom:40px;">
+<p class="text-brand-gray">
+Inúmeras pessoas já transformaram suas vidas com nossos materiais.
+</p>
 
-<button id="btnAvaliar" class="px-8 py-4 bg-brand-gold text-black rounded-full font-bold">
+</div>
 
-Deixe aqui suas avaliações e comentários
+<div style="text-align:center;margin-top:40px;">
+
+<button id="btnAvaliar"
+class="px-8 py-4 rounded-full bg-brand-gold text-black font-bold flex items-center gap-2 mx-auto hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+
+<i data-lucide="message-square"></i>
+Deixe suas avaliações e comentários
 
 </button>
 
-</div>
-
-<div id="modalAvaliar" class="fixed inset-0 hidden items-center justify-center bg-black/70">
-
-<div class="bg-white text-black p-8 rounded-lg max-w-md w-full">
-
-<h3 class="text-xl font-bold mb-4">Deixe sua avaliação</h3>
-
-<input id="nomeUsuario" placeholder="Seu nome" class="w-full border p-2 mb-3">
-
-<textarea id="comentarioUsuario" placeholder="Escreva seu comentário" class="w-full border p-2 mb-3"></textarea>
-
-<div class="stars flex gap-2 mb-4">
-
-<span data-star="1">⭐</span>
-<span data-star="2">⭐</span>
-<span data-star="3">⭐</span>
-<span data-star="4">⭐</span>
-<span data-star="5">⭐</span>
+<div id="contadorAvaliacoes" style="margin-top:10px;"></div>
 
 </div>
 
-<button id="enviarComentario" class="bg-brand-gold px-6 py-2 rounded">
-
-Enviar
-
-</button>
-
-</div>
-
-</div>
-
-<div id="depoimentos-grid" class="grid md:grid-cols-3 gap-8">
-
-</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" id="depoimentos-grid"></div>
 
 </div>
 
 </section>
 
-</main>
+<!-- BOTÃO WHATSAPP -->
 
-<!-- FOOTER -->
+<a href="https://wa.me/5517991996793"
+target="_blank"
+class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition z-50">
+
+<i data-lucide="message-circle"></i>
+
+</a>
+
+<!-- CTA -->
+
+<section class="py-24 bg-brand-black text-center">
+
+<h2 class="text-4xl text-white mb-6">
+Pronto para adquirir seu próximo ebook?
+</h2>
+
+<a href="#catalogo"
+class="px-10 py-5 rounded-full bg-brand-gold text-black font-bold text-xl hover:bg-brand-goldlight hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+
+Explorar Catálogo Agora
+
+</a>
+
+</section>
+
+<!-- FOOTER (ATUALIZADO) -->
 
 <footer class="bg-[#050505] pt-16 pb-8 border-t border-white/10 text-brand-gray">
 
@@ -295,47 +295,20 @@ Enviar
 
 <div class="md:col-span-2">
 
-<a class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-
+<a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
 <span class="w-8 h-8 rounded bg-brand-gold text-black flex items-center justify-center font-bold">M</span>
-
 Professor Mario Gabriel
-
 </a>
 
-<p>
-
+<p class="max-w-sm">
 Ebooks selecionados para o seu crescimento pessoal e profissional.
-
 </p>
 
 </div>
 
 <div>
 
-<h3 class="text-white font-semibold mb-4">
-
-Navegação
-
-</h3>
-
-<ul class="space-y-2">
-
-<li><a href="#destaques">Destaques</a></li>
-<li><a href="#catalogo">Catálogo</a></li>
-<li><a href="#sobre">Sobre</a></li>
-
-</ul>
-
-</div>
-
-<div>
-
-<h3 class="text-white font-semibold mb-4">
-
-Contato
-
-</h3>
+<h3 class="text-white font-semibold mb-4">Contato</h3>
 
 <ul class="space-y-3">
 
@@ -369,9 +342,16 @@ Contato
 
 </div>
 
-<div class="border-t border-white/10 pt-8 text-center text-sm">
+<div class="border-t border-white/10 pt-8 text-sm flex flex-col md:flex-row justify-between items-center">
 
+<div>
 © 2026 Mario Gabriel Spineti de Carvalho. Todos os direitos reservados.
+</div>
+
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#">Privacidade</a>
+<a href="#">Termos de Uso</a>
+</div>
 
 </div>
 
@@ -383,7 +363,411 @@ Contato
 
 <script>
 lucide.createIcons();
+
+ScrollReveal().reveal('section',{
+distance:'40px',
+duration:800,
+origin:'bottom',
+interval:100
+});
 </script>
 
+ <!-- ========================= -->
+<!-- BUSCA NO SITE -->
+<!-- ========================= -->
+
+<div style="position:fixed;top:90px;right:20px;z-index:9999;">
+<input id="buscaSite" placeholder="Buscar no site..."
+style="padding:10px;border-radius:8px;border:none;">
+</div>
+
+<script>
+document.getElementById("buscaSite").addEventListener("keyup",function(){
+
+let termo=this.value.toLowerCase()
+
+document.querySelectorAll("section").forEach(sec=>{
+
+if(sec.innerText.toLowerCase().includes(termo)){
+sec.style.display="block"
+}else{
+sec.style.display="none"
+}
+
+})
+
+})
+</script>
+
+<!-- ========================= -->
+<!-- NEWSLETTER (ATUALIZADA) -->
+<!-- ========================= -->
+
+<section style="padding:80px 20px;text-align:center;background:#111;">
+
+<h2 style="font-size:32px;margin-bottom:20px; color:white;">
+Qual assunto você gostaria que eu transformasse em um eBook para você?
+</h2>
+
+<textarea id="sugestaoEbook" placeholder="Digite sua sugestão (máximo 200 caracteres)" maxlength="200"
+style="padding:12px;border-radius:8px;border:none;margin-bottom:10px; width:80%; max-width:500px; background:#222; color:white;" rows="3"></textarea>
+
+<br>
+
+<input type="email" id="emailUsuario" placeholder="Seu e-mail para contato" required
+style="padding:12px;border-radius:8px;border:none;margin-right:10px; width:300px; max-width:80%; background:#222; color:white;">
+
+<button onclick="enviarSugestao()"
+style="padding:12px 20px;border-radius:8px;background:#D4AF37;border:none;font-weight:bold; color:black; cursor:pointer;">
+   ENVIAR
+</button>
+
+</section>
+
+<script>
+function enviarSugestao() {
+    const sugestao = document.getElementById('sugestaoEbook').value.trim();
+    const email = document.getElementById('emailUsuario').value.trim();
+
+    if (!sugestao) {
+        alert('Por favor, escreva sua sugestão.');
+        return;
+    }
+    if (!email) {
+        alert('Por favor, informe seu e-mail.');
+        return;
+    }
+    // Validação simples de e-mail
+    if (!email.includes('@') || !email.includes('.')) {
+        alert('Por favor, informe um e-mail válido.');
+        return;
+    }
+
+    const assunto = encodeURIComponent('Sugestão de eBook');
+    const corpo = encodeURIComponent(
+        `Assunto sugerido: ${sugestao}\n\n` +
+        `Meu e-mail para contato: ${email}`
+    );
+    window.location.href = `mailto:mariocervo@outlook.com?subject=${assunto}&body=${corpo}`;
+}
+</script>
+
+<!-- ========================= -->
+<!-- DARK / LIGHT MODE -->
+<!-- ========================= -->
+
+<button id="modoBtn"
+style="position:fixed;bottom:100px;right:20px;padding:12px;border-radius:50%;z-index:9999;">
+🌙
+</button>
+
+<script>
+
+let modo=localStorage.getItem("modo")
+
+if(modo==="light"){
+document.body.style.background="#ffffff"
+document.body.style.color="#000000"
+}
+
+document.getElementById("modoBtn").onclick=function(){
+
+if(document.body.style.background==="white"){
+
+document.body.style.background="#0A0A0A"
+document.body.style.color="#fff"
+localStorage.setItem("modo","dark")
+
+}else{
+
+document.body.style.background="white"
+document.body.style.color="#000"
+localStorage.setItem("modo","light")
+
+}
+
+}
+
+</script>
+
+<!-- ========================= -->
+<!-- SISTEMA DE AVALIAÇÕES -->
+<!-- ========================= -->
+
+<div id="modalAvaliar"
+style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000a;z-index:9999;justify-content:center;align-items:center;">
+
+<div style="background:#111;padding:30px;border-radius:10px;width:300px;">
+
+<h3>Deixe sua avaliação</h3>
+
+<input id="nomeAvaliador" placeholder="Seu nome"
+style="width:100%;margin:10px 0;padding:8px;">
+
+<textarea id="comentarioAvaliacao" placeholder="Comentário"
+style="width:100%;margin:10px 0;padding:8px;"></textarea>
+
+<button onclick="enviarAvaliacao()">Enviar</button>
+
+<button onclick="fecharAval()">Fechar</button>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("btnAvaliar").onclick=function(){
+
+document.getElementById("modalAvaliar").style.display="flex"
+
+}
+
+function fecharAval(){
+
+document.getElementById("modalAvaliar").style.display="none"
+
+}
+
+function enviarAvaliacao(){
+
+let nome=document.getElementById("nomeAvaliador").value
+let texto=document.getElementById("comentarioAvaliacao").value
+
+if(!nome||!texto)return alert("Preencha tudo")
+
+let avaliacoes=JSON.parse(localStorage.getItem("avaliacoes")||"[]")
+
+avaliacoes.push({nome,texto})
+
+localStorage.setItem("avaliacoes",JSON.stringify(avaliacoes))
+
+location.reload()
+
+}
+
+window.onload=function(){
+
+let avaliacoes=JSON.parse(localStorage.getItem("avaliacoes")||"[]")
+
+let grid=document.getElementById("depoimentos-grid")
+
+avaliacoes.forEach(a=>{
+
+let div=document.createElement("div")
+
+div.innerHTML=`
+<div style="background:#111;padding:20px;border-radius:10px;">
+<strong>${a.nome}</strong>
+<p>${a.texto}</p>
+</div>
+`
+
+grid.appendChild(div)
+
+})
+
+document.getElementById("contadorAvaliacoes").innerText=
+avaliacoes.length+" avaliações"
+
+}
+
+</script>
+
+<!-- ========================= -->
+<!-- LOGIN SIMPLES -->
+<!-- ========================= -->
+
+<div id="loginBox"
+style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+background:#111;padding:30px;border-radius:10px;display:none;z-index:9999;">
+
+<h3>Área do aluno</h3>
+
+<input id="loginEmail" placeholder="Email"
+style="display:block;margin:10px 0;padding:8px;">
+
+<input id="loginSenha" type="password" placeholder="Senha"
+style="display:block;margin:10px 0;padding:8px;">
+
+<button onclick="logar()">Entrar</button>
+
+</div>
+
+<script>
+
+function logar(){
+
+let email=document.getElementById("loginEmail").value
+
+localStorage.setItem("usuario",email)
+
+alert("Login realizado")
+
+document.getElementById("loginBox").style.display="none"
+
+}
+
+</script>
+
+<!-- ========================= -->
+<!-- BLOG AUTOMÁTICO -->
+<!-- ========================= -->
+
+<section style="padding:80px;background:#111;">
+<div id="blogPosts" style="max-width:800px;margin:auto;"></div>
+</section>
+
+<script>
+let posts=[]
+</script>
+
+<!-- ========================= -->
+<!-- GOOGLE ANALYTICS -->
+<!-- ========================= -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+
+<script>
+window.dataLayer=window.dataLayer||[]
+function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date())
+gtag('config','G-XXXX')
+</script>
+
+<!-- ========================= -->
+<!-- META PIXEL -->
+<!-- ========================= -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+if(!f._fbq)f._fbq=n
+n.push=n
+n.loaded=!0
+n.version='2.0'
+n.queue=[]
+t=b.createElement(e)
+t.async=!0
+t.src=v
+s=b.getElementsByTagName(e)[0]
+s.parentNode.insertBefore(t,s)
+
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js')
+
+fbq('init','PIXEL_ID')
+fbq('track','PageView')
+</script>
+
+<!-- ========================= -->
+<!-- MODAL DETALHES DO EBOOK (adicionado) -->
+<!-- ========================= -->
+
+<div id="modalDetalhesEbook" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:10000; justify-content:center; align-items:center;">
+  <div style="background:#111; padding:20px; border-radius:10px; width:400px; max-width:90%; position:relative; color:white;">
+    <button id="fecharModalDetalhes" style="position:absolute; top:10px; left:10px; background:transparent; border:none; color:white; font-size:20px; cursor:pointer; display:flex; align-items:center; gap:5px;">
+      ← Voltar
+    </button>
+    <h3 style="color:white; margin-top:30px; margin-bottom:15px; font-size:1.5rem;">Detalhes do Ebook</h3>
+    <p style="color:#ccc; margin-bottom:10px;"><strong>Título:</strong> <span id="detalheTitulo"></span></p>
+    <p style="color:#ccc; margin-bottom:20px;"><strong>Descrição:</strong> <span id="detalheDescricao"></span></p>
+    <!-- Áreas vazias para você preencher posteriormente -->
+    <p style="color:#888; font-style:italic;">(Conteúdo da descrição será inserido aqui futuramente)</p>
+  </div>
+</div>
+
+<!-- Script para adicionar botões "Ver detalhes" e controlar o modal -->
+<script>
+  (function() {
+    // Função para adicionar botões aos cards de ebook
+    function adicionarBotoesDetalhes() {
+      // Seleciona todos os cards dentro das grids de destaque e catálogo
+      const grids = ['#destaques-grid', '#catalogo-grid'];
+      let cards = [];
+      grids.forEach(selector => {
+        const grid = document.querySelector(selector);
+        if (grid) {
+          const children = Array.from(grid.children);
+          cards = cards.concat(children);
+        }
+      });
+
+      if (cards.length === 0) {
+        // Se ainda não encontrou cards, tenta novamente mais tarde
+        setTimeout(adicionarBotoesDetalhes, 500);
+        return;
+      }
+
+      // Para cada card, insere o botão "Ver detalhes" antes do botão de comprar
+      cards.forEach(card => {
+        // Verifica se já não foi adicionado
+        if (card.querySelector('.btn-detalhes-ebook')) return;
+
+        // Procura pelo botão de comprar (assumindo que seja um link ou botão com texto "Comprar" ou similar)
+        const botoes = card.querySelectorAll('a, button');
+        let botaoComprar = null;
+        for (let btn of botoes) {
+          if (btn.textContent.toLowerCase().includes('comprar') || btn.textContent.toLowerCase().includes('ver ebook') || btn.textContent.toLowerCase().includes('saiba mais')) {
+            botaoComprar = btn;
+            break;
+          }
+        }
+
+        // Cria o botão "Ver detalhes"
+        const btnDetalhes = document.createElement('button');
+        btnDetalhes.className = 'btn-detalhes-ebook flex items-center gap-2 px-4 py-2 rounded bg-black text-white font-semibold hover:bg-gray-800 transition-all mb-2';
+        btnDetalhes.innerHTML = '<i data-lucide="info"></i> Ver detalhes';
+        btnDetalhes.setAttribute('data-lucide', 'info');
+        
+        // Adiciona evento para abrir o modal
+        btnDetalhes.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Pega o título do ebook (geralmente um h3, h4 ou elemento com classe)
+          const tituloElem = card.querySelector('h3, h4, .font-bold, .text-white');
+          const titulo = tituloElem ? tituloElem.textContent : 'Título do ebook';
+          // Atualiza o modal com o título (descrição fica vazia para você preencher)
+          document.getElementById('detalheTitulo').textContent = titulo;
+          document.getElementById('detalheDescricao').textContent = ''; // vazio para você preencher
+          // Exibe o modal
+          document.getElementById('modalDetalhesEbook').style.display = 'flex';
+        });
+
+        // Insere o botão antes do botão de comprar, se encontrado; senão, no início do card
+        if (botaoComprar && botaoComprar.parentNode) {
+          botaoComprar.parentNode.insertBefore(btnDetalhes, botaoComprar);
+        } else {
+          // Se não encontrou botão de comprar, coloca no topo do card
+          card.insertBefore(btnDetalhes, card.firstChild);
+        }
+      });
+
+      // Atualiza os ícones do Lucide para o novo botão
+      if (typeof lucide !== 'undefined' && lucide.createIcons) {
+        lucide.createIcons();
+      }
+    }
+
+    // Fecha o modal ao clicar no botão Voltar
+    document.getElementById('fecharModalDetalhes').addEventListener('click', function() {
+      document.getElementById('modalDetalhesEbook').style.display = 'none';
+    });
+
+    // Fecha o modal ao clicar fora do conteúdo
+    document.getElementById('modalDetalhesEbook').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+
+    // Aguarda o carregamento da página e tenta adicionar os botões
+    window.addEventListener('load', function() {
+      // Pequeno atraso para garantir que o app.js tenha populado as grids
+      setTimeout(adicionarBotoesDetalhes, 1000);
+    });
+  })();
+</script>
+  
 </body>
 </html>
