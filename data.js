@@ -107,7 +107,7 @@ Você merece uma convivência familiar mais leve, harmoniosa e cheia de amor. Se
         category:"educacao",
         image:"img/Birra.webp",
         hotmartLink:"https://pay.hotmart.com/C104768474Y?checkoutMode=10&split=6",
-        bestseller:true
+        bestseller:false
     },
     {
         id:5,
