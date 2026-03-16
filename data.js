@@ -57,7 +57,7 @@ Sua jornada para uma vida mais leve e feliz começa agora. Você não precisa vi
         category:"desenvolvimento",
         image:"img/Ansiedade.webp",
         hotmartLink:"https://pay.hotmart.com/W104760554P?checkoutMode=10&split=6",
-        bestseller:true
+        bestseller:false
     },
     {
         id:3,
@@ -188,7 +188,7 @@ Transforme a compra do seu carro usado em uma experiência segura, inteligente e
         category:"financas",
         image:"img/carros.webp",
         hotmartLink:"https://pay.hotmart.com/S104908646E?checkoutMode=10&split=6",
-        bestseller:false
+        bestseller:true
     },
     {
         id:8,
