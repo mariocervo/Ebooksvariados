@@ -194,9 +194,6 @@ function compartilhar(rede) {
         case 'whatsapp':
             url = `https://wa.me/?text=${textoEncoded}`;
             break;
-        case 'whatsapp-business':
-            url = `https://api.whatsapp.com/send?text=${textoEncoded}`;
-            break;
         case 'gmail':
             url = `mailto:?subject=${encodeURIComponent('Compartilhamento de eBook')}&body=${textoEncoded}`;
             break;
